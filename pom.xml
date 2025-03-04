@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>github-ations</artifactId>
-    <groupId>great.project</groupId>
+    <artifactId>checkstyle</artifactId>
+    <groupId>com.zhangshunlin</groupId>
     <version>1.0.0</version>
 
     <properties>
@@ -68,11 +68,11 @@
                         <artifactId>checkstyle</artifactId>
                         <version>${checkstyle.version}</version>
                     </dependency>
-<!--                    <dependency>-->
-<!--                        <groupId>great.project</groupId>-->
-<!--                        <artifactId>github-ations</artifactId>-->
-<!--                        <version>${version}</version>-->
-<!--                    </dependency>-->
+                    <!--                    <dependency>-->
+                    <!--                        <groupId>great.project</groupId>-->
+                    <!--                        <artifactId>github-ations</artifactId>-->
+                    <!--                        <version>${version}</version>-->
+                    <!--                    </dependency>-->
                 </dependencies>
                 <configuration>
                     <configLocation>checkstyle.xml</configLocation>
@@ -105,8 +105,9 @@
                         </goals>
                         <configuration>
                             <transformers>
-                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>great.project.App</mainClass>
+                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>com.zhangshunlin.checkstyle.App</mainClass>
                                 </transformer>
                             </transformers>
                             <filters>
@@ -136,5 +137,30 @@
         </plugins>
     </build>
 
+<!--    <profiles>-->
+<!--        <profile>-->
+<!--            <id>github-packages-deploy</id>-->
+<!--            <distributionManagement>-->
+<!--                <repository>-->
+<!--                    <id>github</id>-->
+<!--                    <name>GitHub Packages</name>-->
+<!--                    <url>https://maven.pkg.github.com/zhangShunLin/checkstyle</url>-->
+<!--                </repository>-->
+<!--                <snapshotRepository>-->
+<!--                    <id>github</id>-->
+<!--                    <name>GitHub Packages Snapshots</name>-->
+<!--                    <url>https://maven.pkg.github.com/zhangShunLin/checkstyle</url>-->
+<!--                </snapshotRepository>-->
+<!--            </distributionManagement>-->
+<!--        </profile>-->
+<!--    </profiles>-->
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/zhangShunLin/checkstyle</url>
+        </repository>
+    </distributionManagement>
 
 </project>

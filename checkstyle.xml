@@ -57,7 +57,7 @@
                       value="Consider using special escape sequence instead of octal value or Unicode escaped value."/>
         </module>
 
-<!--                <module name="great.project.checkstyle.FunctionBraceWhitespaceCheck">-->
+<!--                <module name="com.zhangshunlin.checkstyle.FunctionBraceWhitespaceCheck">-->
 <!--        &lt;!&ndash;            <property name="severity" value="error"/>&ndash;&gt;-->
 <!--                </module>-->
 
